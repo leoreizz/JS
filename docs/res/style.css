@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('jsm.jpg') no-repeat center/cover;
+    opacity: 0.4;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.mica {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d0d0d0;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #d0d0d0;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+
+.about-content, .projects-content, .budget-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-content iframe {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.projects-content .video-iframe {
+    height: 450px;
+}
+
+.projects-content .soundcloud-iframe {
+    height: 180px;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.music-item {
+    text-align: center;
+}
+
+.music-item iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.music-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.budget-content .whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+.budget-content .whatsapp-link i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.budget-content .whatsapp-link:hover {
+    color: #d0d0d0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+    header {
+        width: 90%;
+    }
+    .projects-content .video-iframe {
+        height: 300px;
+    }
+    .logo {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+    .budget-content .whatsapp-link i {
+        font-size: 1.5rem;
+    }
+}
